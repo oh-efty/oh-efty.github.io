@@ -1,3 +1,13 @@
+(function loadPolishStyles() {
+  const script = document.currentScript;
+  if (!script || document.querySelector('link[data-polish-styles]')) return;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = new URL('polish.css', script.src).href;
+  link.dataset.polishStyles = 'true';
+  document.head.appendChild(link);
+})();
+
 const root = document.documentElement;
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const storedTheme = localStorage.getItem("efty-theme");
@@ -70,10 +80,6 @@ function syncPortfolioStructure() {
         <div class="tag-row"><span>MATLAB</span><span>Simulink</span><span>OFDM</span><span>MIMO</span></div>
         <a class="project-link" href="projects/ofdm-mimo.html">View project →</a>
       </article>`;
-
-    const style = document.createElement("style");
-    style.textContent = "@media (min-width:1051px){.project-grid.four-projects{grid-template-columns:repeat(2,minmax(0,1fr));}}";
-    document.head.appendChild(style);
   }
 
   const currentResearch = document.querySelector("#research .current-research-grid");
@@ -83,6 +89,27 @@ function syncPortfolioStructure() {
       <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
       <p>Conference-paper research on uncertainty-aware scheduling and rolling-horizon model predictive control for renewable-rich microgrids. Course: <strong>Optimization of Power System Operation</strong>.<br>Supervisor: <strong>Abu Hena Muhammad Shatil</strong>.</p>
       <div class="pub-actions"><a class="link-btn" href="research/microgrid-mpc.html">View research →</a></div>`;
+  }
+
+  const timeline = document.querySelector("#experience .timeline");
+  if (timeline && !timeline.textContent.includes("ESAB AIUB Unit Face")) {
+    const item = document.createElement("article");
+    item.className = "timeline-item reveal visible";
+    item.innerHTML = `
+      <div class="timeline-date">Oct 2023 — Dec 2025</div>
+      <div class="timeline-content">
+        <h3>General Member · ESAB AIUB Unit Face</h3>
+        <p class="timeline-location">Dhaka, Bangladesh</p>
+        <ul class="timeline-points">
+          <li>Supported the planning and execution of student activities and events, fostering collaboration and teamwork within the engineering community.</li>
+          <li>Contributed to initiatives that enhanced student engagement and promoted professional development among peers.</li>
+        </ul>
+      </div>`;
+
+    const peerMentor = [...timeline.querySelectorAll(".timeline-item")]
+      .find(el => el.textContent.includes("Peer Academic Mentor"));
+    if (peerMentor) timeline.insertBefore(item, peerMentor);
+    else timeline.appendChild(item);
   }
 }
 

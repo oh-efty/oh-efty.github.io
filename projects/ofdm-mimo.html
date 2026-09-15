@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An adaptive 2×2 OFDM-MIMO communication system that jointly selects modulation order and transmission-power level using channel information.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <title>AI-Driven Adaptive OFDM-MIMO Communication System | Obyedul Haque Efty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">OE</span>
+        <span class="brand-text">Obyedul Haque Efty</span>
+      </a>
+      <div class="nav-right">
+        <a class="btn btn-secondary" href="../index.html#projects">All Projects</a>
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Switch theme"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container reveal">
+        <a class="project-back" href="../index.html#projects">← Back to portfolio</a>
+        <p class="eyebrow">Wireless Communications · Artificial Intelligence</p>
+        <h1>AI-Driven Adaptive OFDM-MIMO Communication System</h1>
+        <p>An adaptive 2×2 OFDM-MIMO communication system that jointly selects modulation order and transmission-power level using channel information.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="project-banner reveal"><strong>AI-Driven Adaptive OFDM-MIMO Communication System</strong></div>
+
+        <div class="detail-grid">
+          <aside class="detail-sidebar reveal">
+            <dl><div><dt>Architecture</dt><dd>2×2 Spatial Multiplexing</dd></div>
+<div><dt>OFDM</dt><dd>64-point FFT · CP = 16</dd></div>
+<div><dt>Modulation</dt><dd>BPSK · QPSK · 16-QAM · 64-QAM</dd></div>
+<div><dt>Equalization</dt><dd>MMSE</dd></div>
+<div><dt>Platform</dt><dd>MATLAB / Simulink</dd></div></dl>
+          </aside>
+
+          <article class="detail-content reveal">
+            <h2>Overview</h2><p>
+          The system was designed to explore intelligent link adaptation in a fading MIMO channel.
+          Rather than using a single fixed modulation scheme, the controller adapts transmission settings
+          according to estimated channel conditions.
+        </p>
+<h2>Communication Chain</h2><ul>
+          <li>64-point OFDM with 48 data subcarriers, pilot tones and a 16-sample cyclic prefix.</li>
+          <li>2×2 spatial multiplexing over quasi-static Rayleigh fading with AWGN.</li>
+          <li>Pilot-based least-squares channel estimation.</li>
+          <li>MMSE equalization at the receiver.</li>
+          <li>Four modulation schemes combined with five discrete transmission-power levels.</li>
+        </ul>
+<h2>Adaptive Intelligence</h2><p>
+          Channel-quality indicators are used to select from multiple transmission actions, balancing
+          reliability and resource efficiency. The project provides a platform for comparing fixed and
+          intelligent adaptation strategies under changing channel conditions.
+        </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Obyedul Haque Efty.</p>
+      <a href="../index.html">Return to portfolio →</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

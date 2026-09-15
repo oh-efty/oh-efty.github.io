@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://oh-efty.github.io/</loc></url>
   <url><loc>https://oh-efty.github.io/projects/uuv.html</loc></url>
-  <url><loc>https://oh-efty.github.io/projects/microgrid-mpc.html</loc></url>
+  <url><loc>https://oh-efty.github.io/projects/underwater-waste-retrieval.html</loc></url>
+  <url><loc>https://oh-efty.github.io/projects/sequential-multiplier.html</loc></url>
   <url><loc>https://oh-efty.github.io/projects/ofdm-mimo.html</loc></url>
+  <url><loc>https://oh-efty.github.io/research/microgrid-mpc.html</loc></url>
 </urlset>

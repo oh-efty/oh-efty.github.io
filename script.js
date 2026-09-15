@@ -81,7 +81,7 @@ function syncPortfolioStructure() {
     currentResearch.children[0].innerHTML = `
       <p class="eyebrow">Conference Research</p>
       <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
-      <p>Conference-paper research on uncertainty-aware scheduling and rolling-horizon model predictive control for renewable-rich microgrids. Course: <strong>Optimization of Power System Operation</strong>. Supervisor: <strong>Abu Hena Muhammad Shatil</strong>.</p>
+      <p>Conference-paper research on uncertainty-aware scheduling and rolling-horizon model predictive control for renewable-rich microgrids. Course: <strong>Optimization of Power System Operation</strong>.<br>Supervisor: <strong>Abu Hena Muhammad Shatil</strong>.</p>
       <div class="pub-actions"><a class="link-btn" href="research/microgrid-mpc.html">View research →</a></div>`;
   }
 }

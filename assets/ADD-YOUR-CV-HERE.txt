@@ -1,0 +1,4 @@
+Place your latest CV PDF in this folder and rename it:
+Obyedul_Haque_Efty_CV.pdf
+
+The website's CV buttons already point to that filename.

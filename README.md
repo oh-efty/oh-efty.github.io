@@ -1,59 +1,42 @@
-# Obyedul Haque Efty — Academic Portfolio
+# Obyedul Haque Efty — Academic Website V2
 
-A lightweight static personal website designed for GitHub Pages.
+This is a static GitHub Pages website for:
 
-## Files
+**https://oh-efty.github.io/**
 
-- `index.html` — website content
-- `styles.css` — design and responsive layout
-- `script.js` — mobile menu, reveal animation, automatic copyright year
-- `assets/profile-placeholder.svg` — replace this with your photo
-- `assets/Obyedul_Haque_Efty_CV.pdf` — add your current CV using this exact filename
+## V2 improvements
 
-## Before publishing
+- Real profile photo extracted from the current CV
+- Correct LinkedIn, GitHub, ORCID, Google Scholar and ResearchGate links
+- Light / dark mode with saved preference
+- Education section
+- Detailed publication author lists
+- DOI links + downloadable/copyable BibTeX
+- Three dedicated project detail pages
+- Expanded experience and technical toolkit
+- Responsive mobile navigation
+- Active navigation highlighting
+- Favicon
+- SEO metadata + Schema.org Person markup
+- robots.txt + sitemap.xml
+- Custom 404 page
+- Current CV included
 
-### 1. Replace your profile photo
-Put your photo inside `assets/`, for example:
+## Deploy to GitHub Pages
 
-`assets/profile.jpg`
+Replace the files in the **root** of your `oh-efty.github.io` repository with the contents of this folder.
 
-Then in `index.html`, change:
+Important: upload the CONTENTS of this folder, not the outer folder itself.
 
-```html
-<img src="assets/profile-placeholder.svg" ...>
-```
+Repository root should contain:
+- index.html
+- styles.css
+- script.js
+- 404.html
+- robots.txt
+- sitemap.xml
+- assets/
+- projects/
 
-to:
-
-```html
-<img src="assets/profile.jpg" ...>
-```
-
-### 2. Add your CV
-Copy your CV PDF into `assets/` and rename it exactly:
-
-`Obyedul_Haque_Efty_CV.pdf`
-
-### 3. Check your links
-Search `index.html` for:
-- `linkedin.com/in/efty75`
-- `github.com/efty75`
-- `orcid.org`
-
-Update any link that is not correct.
-
-### 4. GitHub Pages repository
-For a personal user site, use a repository named:
-
-`YOUR-USERNAME.github.io`
-
-Example:
-`efty75.github.io`
-
-Upload the website files to the repository root.
-
-## Local preview
-
-Simply open `index.html` in a browser.
-
-For the best local preview in VS Code, install the "Live Server" extension and click **Go Live**.
+GitHub Pages should continue using:
+**Settings → Pages → Deploy from a branch → main → /(root)**

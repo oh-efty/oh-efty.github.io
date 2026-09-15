@@ -1,4 +1,3 @@
-
 const root = document.documentElement;
 const themeToggle = document.querySelector("[data-theme-toggle]");
 const storedTheme = localStorage.getItem("efty-theme");
@@ -37,6 +36,57 @@ if (menuToggle && navLinks) {
     menuToggle.setAttribute("aria-expanded", "false");
   }));
 }
+
+function syncPortfolioStructure() {
+  const projectGrid = document.querySelector("#projects .project-grid");
+  if (projectGrid) {
+    projectGrid.classList.add("four-projects");
+    projectGrid.innerHTML = `
+      <article class="project-card reveal visible">
+        <div class="project-top"><span class="project-label">Capstone · Robotics · Computer Vision</span><span class="project-arrow">↗</span></div>
+        <h3>Unmanned Underwater Vehicle (UUV/ROV)</h3>
+        <p>Four-member undergraduate capstone project integrating underwater vehicle control, computer vision, sensing, navigation and robotic manipulation.</p>
+        <div class="tag-row"><span>Raspberry Pi</span><span>YOLOv8</span><span>Pixhawk</span><span>ArduSub</span></div>
+        <a class="project-link" href="projects/uuv.html">View project →</a>
+      </article>
+      <article class="project-card reveal visible">
+        <div class="project-top"><span class="project-label">Intelligent Robotics · Computer Vision</span><span class="project-arrow">↗</span></div>
+        <h3>Vision-Guided Underwater Waste Retrieval</h3>
+        <p>Two-member robotics project combining underwater waste detection and classification with a vision-guided robotic retrieval mechanism.</p>
+        <div class="tag-row"><span>Computer Vision</span><span>Robotics</span><span>Object Detection</span><span>Manipulator</span></div>
+        <a class="project-link" href="projects/underwater-waste-retrieval.html">View project →</a>
+      </article>
+      <article class="project-card reveal visible">
+        <div class="project-top"><span class="project-label">Digital Design · FPGA · HDL</span><span class="project-arrow">↗</span></div>
+        <h3>Synchronous Sequential Multiplier: FSM-Based ALU Design</h3>
+        <p>Four-member digital-design project implementing and validating a 3×3 unsigned sequential multiplier using an FSM-based datapath architecture.</p>
+        <div class="tag-row"><span>SystemVerilog</span><span>Active-HDL</span><span>Vivado</span><span>FSM</span></div>
+        <a class="project-link" href="projects/sequential-multiplier.html">View project →</a>
+      </article>
+      <article class="project-card reveal visible">
+        <div class="project-top"><span class="project-label">Wireless Communications · Artificial Intelligence</span><span class="project-arrow">↗</span></div>
+        <h3>AI-Driven Adaptive OFDM-MIMO Communication System</h3>
+        <p>Individual 2×2 OFDM-MIMO project using channel-aware adaptation to jointly select modulation order and transmission-power level.</p>
+        <div class="tag-row"><span>MATLAB</span><span>Simulink</span><span>OFDM</span><span>MIMO</span></div>
+        <a class="project-link" href="projects/ofdm-mimo.html">View project →</a>
+      </article>`;
+
+    const style = document.createElement("style");
+    style.textContent = "@media (min-width:1051px){.project-grid.four-projects{grid-template-columns:repeat(2,minmax(0,1fr));}}";
+    document.head.appendChild(style);
+  }
+
+  const currentResearch = document.querySelector("#research .current-research-grid");
+  if (currentResearch && currentResearch.children.length) {
+    currentResearch.children[0].innerHTML = `
+      <p class="eyebrow">Conference Research</p>
+      <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
+      <p>Conference-paper research on uncertainty-aware scheduling and rolling-horizon model predictive control for renewable-rich microgrids. Course: <strong>Optimization of Power System Operation</strong>. Supervisor: <strong>Abu Hena Muhammad Shatil</strong>.</p>
+      <div class="pub-actions"><a class="link-btn" href="research/microgrid-mpc.html">View research →</a></div>`;
+  }
+}
+
+syncPortfolioStructure();
 
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {

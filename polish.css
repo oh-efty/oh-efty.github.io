@@ -129,6 +129,39 @@
 .detail-content li + li { margin-top: 7px; }
 .contact-card strong { overflow-wrap: anywhere; }
 
+/* Body copy: even left/right edges while headings and metadata stay left aligned */
+.hero-description,
+.prose p,
+.edu-card p,
+.research-card p,
+.current-research p:not(.eyebrow),
+.publication-card > p:not(.pub-authors),
+.project-card > p,
+.timeline-content > p:not(.timeline-location),
+.skill-card p,
+.detail-content p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
+}
+
+/* Keep the ESAB entry concise, matching the other Experience entries */
+.timeline-content:has(.timeline-points) .timeline-location,
+.timeline-content:has(.timeline-points) .timeline-points {
+  display: none;
+}
+.timeline-content:has(.timeline-points)::after {
+  content: "Supported student activities and events, promoting collaboration, engagement and professional development within the engineering community.";
+  display: block;
+  color: var(--muted);
+  line-height: 1.72;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
+}
+
 @media (max-width: 1050px) {
   .project-grid.four-projects { grid-template-columns: 1fr; }
 }

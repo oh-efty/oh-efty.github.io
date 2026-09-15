@@ -129,21 +129,34 @@
 .detail-content li + li { margin-top: 7px; }
 .contact-card strong { overflow-wrap: anywhere; }
 
-/* Body copy: even left/right edges while headings and metadata stay left aligned */
+/*
+  Smart justification:
+  Keep long-form copy justified where the line length is wide enough to look natural.
+  Short/narrow card copy stays left-aligned to prevent large gaps between words.
+*/
 .hero-description,
 .prose p,
 .edu-card p,
-.research-card p,
-.current-research p:not(.eyebrow),
 .publication-card > p:not(.pub-authors),
-.project-card > p,
 .timeline-content > p:not(.timeline-location),
-.skill-card p,
 .detail-content p {
   text-align: justify;
   text-justify: inter-word;
   text-align-last: left;
   hyphens: auto;
+  -webkit-hyphens: auto;
+  word-spacing: -0.015em;
+}
+
+/* Narrow cards read better left-aligned than force-justified. */
+.research-card p,
+.current-research p,
+.project-card p,
+.skill-card p,
+.section-subtitle,
+.pub-authors {
+  text-align: left;
+  word-spacing: normal;
 }
 
 /* Keep the ESAB entry concise, matching the other Experience entries */
@@ -156,10 +169,8 @@
   display: block;
   color: var(--muted);
   line-height: 1.72;
-  text-align: justify;
-  text-justify: inter-word;
-  text-align-last: left;
-  hyphens: auto;
+  text-align: left;
+  text-wrap: pretty;
 }
 
 @media (max-width: 1050px) {
@@ -174,4 +185,15 @@
     gap: 2px;
   }
   .timeline-content { max-width: none; }
+
+  /* On narrow screens, full justification creates visible word gaps. */
+  .hero-description,
+  .prose p,
+  .edu-card p,
+  .publication-card > p:not(.pub-authors),
+  .timeline-content > p:not(.timeline-location),
+  .detail-content p {
+    text-align: left;
+    word-spacing: normal;
+  }
 }

@@ -17,6 +17,15 @@ Current research directions include:
 - Cybersecurity and cyber-physical energy systems
 - Photonics and emerging devices
 
+## Official academic & professional profiles
+
+- Website: https://oh-efty.github.io/
+- LinkedIn: https://linkedin.com/in/efty75
+- GitHub: https://github.com/oh-efty
+- ORCID: https://orcid.org/0009-0001-9240-9705
+- Google Scholar: https://scholar.google.com/citations?user=u2fjd7oAAAAJ
+- ResearchGate: https://www.researchgate.net/profile/Obyedul-Haque-Efty
+
 ## Website features
 
 - Responsive academic portfolio with light/dark mode

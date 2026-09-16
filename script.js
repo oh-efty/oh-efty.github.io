@@ -214,7 +214,7 @@ function syncPortfolioStructure() {
     if (details && !details.textContent.includes("Capstone Project Supervisor")) {
       details.insertAdjacentHTML(
         "beforeend",
-        `<br>Capstone Project Supervisor: <strong>Prof. Dr. Md. Abdur Rahman</strong>, Pro-Vice Chancellor &amp; Professor, Faculty of Engineering, AIUB.`
+        `<br>Capstone Project Supervisor: <strong>Dr. Md. Abdur Rahman</strong>, Pro-Vice Chancellor &amp; Professor, Faculty of Engineering, AIUB.`
       );
     }
   }

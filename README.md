@@ -1,42 +1,62 @@
-# Obyedul Haque Efty — Academic Website V2
+# Obyedul Haque Efty — Academic & Research Portfolio
 
-This is a static GitHub Pages website for:
+Public academic and research website:
 
 **https://oh-efty.github.io/**
 
-## V2 improvements
+## Portfolio scope
 
-- Real profile photo extracted from the current CV
-- Correct LinkedIn, GitHub, ORCID, Google Scholar and ResearchGate links
-- Light / dark mode with saved preference
-- Education section
-- Detailed publication author lists
-- DOI links + downloadable/copyable BibTeX
-- Three dedicated project detail pages
-- Expanded experience and technical toolkit
-- Responsive mobile navigation
-- Active navigation highlighting
-- Favicon
-- SEO metadata + Schema.org Person markup
-- robots.txt + sitemap.xml
+The site presents my academic background, research interests, publications, selected research, engineering projects, industry experience, technical toolkit and academic achievements in Electrical & Electronic Engineering.
+
+Current research directions include:
+
+- Power and energy systems
+- Renewable energy and photovoltaic systems
+- Smart grids, microgrids and distributed energy resources
+- AI and data-driven power systems
+- Cybersecurity and cyber-physical energy systems
+- Photonics and emerging devices
+
+## Website features
+
+- Responsive academic portfolio with light/dark mode
+- Current CV and professional profile links
+- Education, experience, skills and achievements
+- Two IEEE TPEC 2026 publications with DOI and BibTeX links
+- Three dedicated research pages
+  - M.Sc. thesis: DER-integrated power-system / microgrid cybersecurity
+  - AI data-center–grid interaction and dynamic grid response
+  - Microgrid forecast uncertainty, stochastic scheduling and rolling-horizon MPC
+- Four dedicated project pages
+  - Unmanned Underwater Vehicle (UUV/ROV)
+  - Vision-Guided Underwater Waste Retrieval
+  - Synchronous Sequential Multiplier: FSM-Based ALU Design
+  - AI-Driven Adaptive OFDM-MIMO Communication System
+- SEO metadata, canonical URLs, Open Graph/Twitter metadata and Schema.org structured data
+- `robots.txt`, `sitemap.xml` and Google Search Console verification
+- Google Analytics 4 tracking
+- Public Total Visitors and Today's Visitors counters
 - Custom 404 page
-- Current CV included
 
-## Deploy to GitHub Pages
+## Main structure
 
-Replace the files in the **root** of your `oh-efty.github.io` repository with the contents of this folder.
+```text
+/
+├── index.html
+├── styles.css
+├── polish.css
+├── script.js
+├── 404.html
+├── robots.txt
+├── sitemap.xml
+├── assets/
+├── projects/
+└── research/
+```
 
-Important: upload the CONTENTS of this folder, not the outer folder itself.
+## Deployment
 
-Repository root should contain:
-- index.html
-- styles.css
-- script.js
-- 404.html
-- robots.txt
-- sitemap.xml
-- assets/
-- projects/
+The website is deployed with GitHub Pages from the `main` branch at the repository root.
 
-GitHub Pages should continue using:
-**Settings → Pages → Deploy from a branch → main → /(root)**
+**Repository:** https://github.com/oh-efty/oh-efty.github.io  
+**Live site:** https://oh-efty.github.io/

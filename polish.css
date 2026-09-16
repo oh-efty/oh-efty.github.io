@@ -137,7 +137,7 @@
 .hero-description,
 .prose p,
 .edu-card p,
-.publication-card > p:not(.pub-authors),
+.publication-card > p:not(.pub-authors):not(.pub-status-line),
 .timeline-content > p:not(.timeline-location),
 .detail-content p {
   text-align: justify;
@@ -154,9 +154,141 @@
 .project-card p,
 .skill-card p,
 .section-subtitle,
-.pub-authors {
+.pub-authors,
+.pub-status-line {
   text-align: left;
   word-spacing: normal;
+}
+
+/* Selected research work */
+.selected-research {
+  margin-top: 28px;
+  padding: 30px;
+}
+.selected-research-heading {
+  margin-bottom: 22px;
+  max-width: 760px;
+}
+.selected-research-heading h3 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+}
+.selected-research-heading > p:last-child {
+  margin: 9px 0 0;
+  color: var(--muted);
+}
+.research-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.research-work-card {
+  min-height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.research-work-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.research-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.research-status.ongoing {
+  background: rgba(22, 148, 71, .10);
+  color: var(--success);
+}
+.research-year {
+  color: var(--muted);
+  font-size: .77rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.research-work-card h3 {
+  margin: 0 0 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+.research-work-card > p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.68;
+  text-align: left;
+}
+.research-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .84rem;
+}
+.research-meta span { line-height: 1.45; }
+.research-meta strong {
+  display: inline-block;
+  min-width: 74px;
+  color: var(--ink-2);
+}
+.research-work-card .tag-row { margin-top: 18px; }
+.research-work-card .project-link { margin-top: 20px; }
+
+/* Publications summary/profile strip */
+.publication-profile-row {
+  margin: -18px 0 24px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.publication-profile-row > div:first-child {
+  display: grid;
+  gap: 3px;
+}
+.publication-profile-row strong {
+  font-family: "Manrope", sans-serif;
+  font-size: .98rem;
+}
+.publication-profile-row span {
+  color: var(--muted);
+  font-size: .82rem;
+}
+.pub-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.pub-status-line {
+  margin: 9px 0 0;
+  color: var(--primary);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 
 /* Keep the ESAB entry concise, matching the other Experience entries */
@@ -174,7 +306,8 @@
 }
 
 @media (max-width: 1050px) {
-  .project-grid.four-projects { grid-template-columns: 1fr; }
+  .project-grid.four-projects,
+  .research-work-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 780px) {
@@ -185,12 +318,19 @@
     gap: 2px;
   }
   .timeline-content { max-width: none; }
+  .selected-research { padding: 20px; }
+  .publication-profile-row {
+    margin-top: -10px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .pub-profile-links { justify-content: flex-start; }
 
   /* On narrow screens, full justification creates visible word gaps. */
   .hero-description,
   .prose p,
   .edu-card p,
-  .publication-card > p:not(.pub-authors),
+  .publication-card > p:not(.pub-authors):not(.pub-status-line),
   .timeline-content > p:not(.timeline-location),
   .detail-content p {
     text-align: left;

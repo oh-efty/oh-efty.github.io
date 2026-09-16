@@ -94,6 +94,51 @@ function syncPortfolioStructure() {
     }
   }
 
+  const researchSection = document.querySelector("#research");
+  const researchGrid = researchSection?.querySelector(".research-grid");
+  const researchSubtitle = researchSection?.querySelector(".section-subtitle");
+  if (researchSubtitle) {
+    researchSubtitle.textContent = "Five core areas currently shape my academic and research direction.";
+  }
+  if (researchGrid) {
+    researchGrid.classList.add("five-interests");
+    researchGrid.innerHTML = `
+      <article class="research-card reveal visible">
+        <span class="card-number">01</span>
+        <h3>Renewable Energy & Photovoltaic Systems</h3>
+        <p>Renewable-energy integration, photovoltaic systems, forecasting, energy management and optimization for sustainable power systems.</p>
+        <div class="tag-row"><span>PV Systems</span><span>Renewable Integration</span><span>Optimization</span></div>
+      </article>
+
+      <article class="research-card reveal visible">
+        <span class="card-number">02</span>
+        <h3>Smart Grids, Microgrids & DERs</h3>
+        <p>Distributed energy resources, grid-connected and islanded microgrids, resilience, scheduling, stability and intelligent grid operation.</p>
+        <div class="tag-row"><span>Microgrids</span><span>DERs</span><span>Smart Grids</span></div>
+      </article>
+
+      <article class="research-card reveal visible">
+        <span class="card-number">03</span>
+        <h3>AI & Data-Driven Power Systems</h3>
+        <p>AI/ML-assisted forecasting, anomaly detection, intelligent control and data-driven decision-making for modern power and energy systems.</p>
+        <div class="tag-row"><span>AI/ML</span><span>Forecasting</span><span>Intelligent Control</span></div>
+      </article>
+
+      <article class="research-card reveal visible">
+        <span class="card-number">04</span>
+        <h3>Cybersecurity & Cyber-Physical Energy Systems</h3>
+        <p>Cybersecurity of DER-integrated power systems and microgrids, including attack impact analysis, detection, classification, mitigation and secure distributed operation.</p>
+        <div class="tag-row"><span>Cybersecurity</span><span>FDI / DoS</span><span>Digital Twin</span></div>
+      </article>
+
+      <article class="research-card reveal visible">
+        <span class="card-number">05</span>
+        <h3>Photonics & Emerging Devices</h3>
+        <p>Photonic integrated circuits, optical devices, silicon photonics, semiconductor device physics and emerging nanoelectronic technologies.</p>
+        <div class="tag-row"><span>PIC</span><span>Silicon Photonics</span><span>Nanoelectronics</span></div>
+      </article>`;
+  }
+
   const currentResearch = document.querySelector("#research .current-research");
   if (currentResearch) {
     currentResearch.classList.add("selected-research");

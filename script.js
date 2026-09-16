@@ -82,6 +82,18 @@ function syncPortfolioStructure() {
       </article>`;
   }
 
+  const educationCards = [...document.querySelectorAll("#education .edu-card")];
+  const bachelorCard = educationCards.find(card => card.textContent.includes("Bachelor of Science in Electrical & Electronic Engineering"));
+  if (bachelorCard) {
+    const details = [...bachelorCard.querySelectorAll("p")].find(p => !p.classList.contains("edu-degree"));
+    if (details && !details.textContent.includes("Capstone Project Supervisor")) {
+      details.insertAdjacentHTML(
+        "beforeend",
+        `<br>Capstone Project Supervisor: <strong>Prof. Dr. Md. Abdur Rahman</strong>, Pro-Vice Chancellor &amp; Professor, Faculty of Engineering, AIUB.`
+      );
+    }
+  }
+
   const currentResearch = document.querySelector("#research .current-research");
   if (currentResearch) {
     currentResearch.classList.add("selected-research");
@@ -89,7 +101,7 @@ function syncPortfolioStructure() {
       <div class="selected-research-heading">
         <p class="eyebrow">Selected Research</p>
         <h3>Current and recent research work</h3>
-        <p>M.Sc. thesis research and conference-oriented work across cyber-physical power systems, microgrids and emerging AI infrastructure.</p>
+        <p>M.Sc. thesis research and ICREST-oriented work across cyber-physical power systems, microgrids and emerging AI infrastructure.</p>
       </div>
       <div class="research-work-grid">
         <article class="research-work-card thesis-card">
@@ -109,13 +121,14 @@ function syncPortfolioStructure() {
 
         <article class="research-work-card">
           <div class="research-work-top">
-            <span class="research-status ongoing">ICREST Research</span>
+            <span class="research-status ongoing">ICREST Research · Ongoing</span>
             <span class="research-year">2026 — Present</span>
           </div>
           <h3>AI Data Center–Grid Interaction and Dynamic Grid Response</h3>
-          <p>Conference-oriented research on how rapidly changing AI-compute demand, power-electronic interfaces and UPS behavior can affect power-system dynamics, flexibility and grid response.</p>
+          <p>Ongoing ICREST-oriented research on how rapidly changing AI-compute demand, power-electronic interfaces and UPS behavior can affect power-system dynamics, flexibility and grid response.</p>
           <div class="research-meta">
             <span><strong>Supervisor</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Status</strong> Research work in progress</span>
             <span><strong>Focus</strong> Dynamic load behavior · UPS response · nonlinear grid dynamics</span>
           </div>
           <div class="tag-row"><span>AI Data Centers</span><span>Power Systems</span><span>UPS</span><span>Dynamic Simulation</span></div>
@@ -124,12 +137,13 @@ function syncPortfolioStructure() {
 
         <article class="research-work-card">
           <div class="research-work-top">
-            <span class="research-status">Conference Research</span>
+            <span class="research-status">ICREST Research · Completed</span>
             <span class="research-year">2026</span>
           </div>
           <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
-          <p>Uncertainty-aware microgrid scheduling research comparing deterministic/stochastic day-ahead operation with rolling-horizon model predictive control in renewable-rich grid-connected and islanded systems.</p>
+          <p>Completed ICREST-oriented conference research comparing deterministic/stochastic day-ahead scheduling with rolling-horizon model predictive control in renewable-rich grid-connected and islanded microgrids.</p>
           <div class="research-meta">
+            <span><strong>Status</strong> Research work completed; intended for ICREST conference submission</span>
             <span><strong>Course</strong> Optimization of Power System Operation</span>
             <span><strong>Supervisor</strong> Abu Hena Muhammad Shatil</span>
           </div>

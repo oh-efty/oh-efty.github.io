@@ -77,11 +77,11 @@
       </article>
       <article class="skill-card reveal visible">
         <h3>Embedded Systems & Robotics</h3>
-        <p>Arduino, ESP32, Raspberry Pi, Pixhawk, ArduSub, BlueOS, QGroundControl and sensor-integration workflows.</p>
+        <p>Arduino, ESP32, STM32, Raspberry Pi, Pixhawk, ArduSub, Cockpit, QGroundControl and sensor-integration workflows.</p>
       </article>
       <article class="skill-card reveal visible">
         <h3>Simulation, EM & Research Tools</h3>
-        <p>COMSOL Multiphysics, CST Microwave Studio, EasyEDA, Proteus, NI Multisim, SOLIDWORKS, LaTeX, pandas and matplotlib.</p>
+        <p>COMSOL Multiphysics, CST Microwave Studio, SOLIDWORKS, AutoCAD, EasyEDA, Proteus, NI Multisim, LaTeX, pandas and matplotlib.</p>
       </article>`;
   }
 

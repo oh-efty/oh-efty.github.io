@@ -368,3 +368,65 @@
     word-spacing: normal;
   }
 }
+
+/* Narrow-phone refinement: preserve hierarchy without crowding 320–430px screens. */
+@media (max-width: 560px) {
+  .section-heading { margin-bottom: 34px; }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .profile-card-body,
+  .research-card,
+  .publication-card,
+  .project-card,
+  .skill-card,
+  .achievement-card,
+  .detail-sidebar {
+    padding: 20px;
+  }
+
+  .quick-facts div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .quick-facts dd { text-align: left; }
+
+  .selected-research { padding: 16px; }
+  .research-work-card { padding: 20px; }
+  .research-work-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .research-status { max-width: 100%; }
+
+  .publication-profile-row { padding: 16px; }
+  .pub-profile-links,
+  .pub-actions,
+  .button-row {
+    width: 100%;
+  }
+  .pub-profile-links .link-btn,
+  .pub-actions .link-btn,
+  .pub-actions .copy-btn {
+    max-width: 100%;
+  }
+
+  .project-hero { padding-top: 58px; }
+  .project-hero h1 {
+    font-size: clamp(2.05rem, 11vw, 3rem);
+    overflow-wrap: anywhere;
+  }
+  .project-hero p { font-size: .98rem; }
+  .project-banner {
+    min-height: 190px;
+    padding: 22px;
+  }
+  .project-banner strong { font-size: clamp(1.35rem, 7vw, 2rem); }
+
+  .contact-card a { padding: 17px 18px; }
+  .footer-links { row-gap: 10px; }
+}

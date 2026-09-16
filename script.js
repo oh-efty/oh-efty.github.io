@@ -82,14 +82,79 @@ function syncPortfolioStructure() {
       </article>`;
   }
 
-  const currentResearch = document.querySelector("#research .current-research-grid");
-  if (currentResearch && currentResearch.children.length) {
-    currentResearch.children[0].innerHTML = `
-      <p class="eyebrow">Conference Research</p>
-      <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
-      <p>Conference-paper research on uncertainty-aware scheduling and rolling-horizon model predictive control for renewable-rich microgrids. Course: <strong>Optimization of Power System Operation</strong>.<br>Supervisor: <strong>Abu Hena Muhammad Shatil</strong>.</p>
-      <div class="pub-actions"><a class="link-btn" href="research/microgrid-mpc.html">View research →</a></div>`;
+  const currentResearch = document.querySelector("#research .current-research");
+  if (currentResearch) {
+    currentResearch.classList.add("selected-research");
+    currentResearch.innerHTML = `
+      <div class="selected-research-heading">
+        <p class="eyebrow">Selected Research</p>
+        <h3>Current and recent research work</h3>
+        <p>Research activities extending beyond coursework and engineering projects.</p>
+      </div>
+      <div class="research-work-grid">
+        <article class="research-work-card">
+          <div class="research-work-top">
+            <span class="research-status">Conference Research</span>
+            <span class="research-year">2026</span>
+          </div>
+          <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
+          <p>Uncertainty-aware microgrid scheduling research comparing deterministic/stochastic day-ahead operation with rolling-horizon model predictive control in renewable-rich grid-connected and islanded systems.</p>
+          <div class="research-meta">
+            <span><strong>Course</strong> Optimization of Power System Operation</span>
+            <span><strong>Supervisor</strong> Abu Hena Muhammad Shatil</span>
+          </div>
+          <div class="tag-row"><span>Microgrids</span><span>Stochastic Scheduling</span><span>MPC</span><span>Pyomo</span></div>
+          <a class="project-link" href="research/microgrid-mpc.html">View research →</a>
+        </article>
+
+        <article class="research-work-card">
+          <div class="research-work-top">
+            <span class="research-status ongoing">Ongoing Research</span>
+            <span class="research-year">2026 — Present</span>
+          </div>
+          <h3>AI Data Center–Grid Interaction and Dynamic Grid Response</h3>
+          <p>Ongoing investigation of how rapidly changing AI-compute demand, power-electronic interfaces and UPS behaviour can affect power-system dynamics, flexibility and grid response.</p>
+          <div class="research-meta">
+            <span><strong>Status</strong> Research in progress</span>
+            <span><strong>Focus</strong> Dynamic load behaviour and grid interaction</span>
+          </div>
+          <div class="tag-row"><span>AI Data Centers</span><span>Power Systems</span><span>UPS</span><span>Dynamic Simulation</span></div>
+          <a class="project-link" href="research/ai-data-center-grid.html">View research →</a>
+        </article>
+      </div>`;
   }
+
+  const publications = document.querySelector("#publications .container");
+  if (publications && !publications.querySelector(".publication-profile-row")) {
+    const heading = publications.querySelector(".section-heading");
+    const profileRow = document.createElement("div");
+    profileRow.className = "publication-profile-row reveal visible";
+    profileRow.innerHTML = `
+      <div>
+        <strong>2 peer-reviewed IEEE conference papers</strong>
+        <span>IEEE Texas Power and Energy Conference (TPEC) 2026</span>
+      </div>
+      <div class="pub-profile-links">
+        <a class="link-btn" href="https://scholar.google.com/citations?user=u2fjd7oAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="link-btn" href="https://orcid.org/0009-0001-9240-9705" target="_blank" rel="noopener">ORCID ↗</a>
+        <a class="link-btn" href="https://www.researchgate.net/profile/Obyedul-Haque-Efty" target="_blank" rel="noopener">ResearchGate ↗</a>
+      </div>`;
+    if (heading) heading.insertAdjacentElement("afterend", profileRow);
+  }
+
+  document.querySelectorAll("#publications .publication-card").forEach(card => {
+    if (!card.querySelector(".pub-status-line")) {
+      const title = card.querySelector("h3");
+      if (title) {
+        const status = document.createElement("p");
+        status.className = "pub-status-line";
+        status.textContent = "Published · 2026 · Co-author";
+        title.insertAdjacentElement("afterend", status);
+      }
+    }
+    const doi = card.querySelector('.pub-actions a[href^="https://doi.org/"]');
+    if (doi) doi.textContent = "IEEE / DOI ↗";
+  });
 
   const timeline = document.querySelector("#experience .timeline");
   if (timeline && !timeline.textContent.includes("ESAB AIUB Unit Face")) {

@@ -89,7 +89,7 @@ function syncPortfolioStructure() {
     if (details && !details.textContent.includes("Capstone Project Supervisor")) {
       details.insertAdjacentHTML(
         "beforeend",
-        `<br>Capstone Project Supervisor: <strong>Prof. Dr. Md. Abdur Rahman</strong>, Pro-Vice Chancellor &amp; Professor, Faculty of Engineering, AIUB.`
+        `<br>Capstone Project Supervisor: <strong>Dr. Md. Abdur Rahman</strong>, Pro-VC &amp; Professor, Faculty of Engineering, AIUB.`
       );
     }
   }
@@ -112,8 +112,8 @@ function syncPortfolioStructure() {
           <h3>Advanced Cybersecurity of DER-Integrated Power Systems / Microgrids</h3>
           <p>Cyber-physical security research on DER-integrated grids and microgrids, studying the impact of selected cyber attacks and developing suitable detection, classification and mitigation approaches.</p>
           <div class="research-meta">
-            <span><strong>Supervisor</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
-            <span><strong>Attacks</strong> False Data Injection · DoS · command injection · GPS/time spoofing</span>
+            <span><strong>Supervisor:</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Attacks:</strong> False Data Injection · DoS · command injection · GPS/time spoofing</span>
           </div>
           <div class="tag-row"><span>DER Cybersecurity</span><span>Microgrids</span><span>AI/DL</span><span>Digital Twin</span></div>
           <a class="project-link" href="research/der-cybersecurity-thesis.html">View thesis research →</a>
@@ -127,9 +127,9 @@ function syncPortfolioStructure() {
           <h3>AI Data Center–Grid Interaction and Dynamic Grid Response</h3>
           <p>Ongoing ICREST-oriented research on how rapidly changing AI-compute demand, power-electronic interfaces and UPS behavior can affect power-system dynamics, flexibility and grid response.</p>
           <div class="research-meta">
-            <span><strong>Supervisor</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
-            <span><strong>Status</strong> Research work in progress</span>
-            <span><strong>Focus</strong> Dynamic load behavior · UPS response · nonlinear grid dynamics</span>
+            <span><strong>Supervisor:</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Status:</strong> Research work in progress</span>
+            <span><strong>Focus:</strong> Dynamic load behavior · UPS response · nonlinear grid dynamics</span>
           </div>
           <div class="tag-row"><span>AI Data Centers</span><span>Power Systems</span><span>UPS</span><span>Dynamic Simulation</span></div>
           <a class="project-link" href="research/ai-data-center-grid.html">View research →</a>
@@ -143,9 +143,9 @@ function syncPortfolioStructure() {
           <h3>Quantifying Forecast Uncertainty Cost and Mitigation in Grid-Connected and Islanded Microgrids Using Stochastic Scheduling and Rolling-Horizon MPC</h3>
           <p>Completed ICREST-oriented conference research comparing deterministic/stochastic day-ahead scheduling with rolling-horizon model predictive control in renewable-rich grid-connected and islanded microgrids.</p>
           <div class="research-meta">
-            <span><strong>Status</strong> Research work completed; intended for ICREST conference submission</span>
-            <span><strong>Course</strong> Optimization of Power System Operation</span>
-            <span><strong>Supervisor</strong> Abu Hena Muhammad Shatil</span>
+            <span><strong>Supervisor:</strong> Abu Hena Muhammad Shatil, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Status:</strong> Research work completed, intended for ICREST submission</span>
+            <span><strong>Course:</strong> Optimization of Power System Operation</span>
           </div>
           <div class="tag-row"><span>Microgrids</span><span>Stochastic Scheduling</span><span>MPC</span><span>Pyomo</span></div>
           <a class="project-link" href="research/microgrid-mpc.html">View research →</a>

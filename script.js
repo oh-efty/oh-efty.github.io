@@ -16,7 +16,7 @@
 
 (function loadPolishStyles() {
   const script = document.currentScript;
-  if (!script || document.querySelector('link[data-polish-styles]')) return;
+  if (!script || document.querySelector('link[data-polish-styles], link[href$="polish.css"]')) return;
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = new URL('polish.css', script.src).href;

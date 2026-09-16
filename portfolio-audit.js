@@ -1,4 +1,66 @@
 (function finalizePortfolioSections() {
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.content = "Academic and research portfolio of Obyedul Haque Efty — M.Sc. researcher in Electrical & Electronic Engineering focusing on power and energy systems, smart grids and microgrids, applied AI, DER cybersecurity and cyber-physical energy systems, with broader interests in photonics and emerging devices.";
+  }
+
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  if (ogDescription) {
+    ogDescription.content = "Power & Energy Systems · Smart Grids & Microgrids · Applied AI · Cyber-Physical Security · Photonics";
+  }
+
+  const heroTitle = document.querySelector("#home .hero-title");
+  if (heroTitle) {
+    heroTitle.textContent = "M.Sc. Researcher · Power & Energy Systems · Smart Grids & Microgrids · AI · Cyber-Physical Security";
+  }
+
+  const heroDescription = document.querySelector("#home .hero-description");
+  if (heroDescription) {
+    heroDescription.textContent = "My research focuses on intelligent, resilient and secure power and energy systems, spanning renewable integration, smart grids and microgrids, AI-driven analysis, cyber-physical security and dynamic grid interaction with emerging AI infrastructure.";
+  }
+
+  const profileHeadline = document.querySelector("#home .profile-card h2");
+  if (profileHeadline) {
+    profileHeadline.textContent = "Researching intelligent, resilient and secure energy systems.";
+  }
+
+  const aboutSection = document.querySelector("#about");
+  const aboutTitle = aboutSection?.querySelector(".section-title");
+  const aboutProse = aboutSection?.querySelector(".prose");
+  if (aboutTitle) {
+    aboutTitle.textContent = "Research at the intersection of energy, intelligence and resilience.";
+  }
+  if (aboutProse) {
+    aboutProse.innerHTML = `
+      <p>
+        I am an Electrical and Electronic Engineering graduate from
+        <strong>American International University-Bangladesh (AIUB)</strong> and currently pursuing an
+        M.Sc. in Electrical &amp; Electronic Engineering, with a primary focus on power and energy systems,
+        renewable integration and applied artificial intelligence.
+      </p>
+      <p>
+        My current research includes cybersecurity of DER-integrated power systems and microgrids,
+        AI data-center–grid interaction and dynamic grid response, and uncertainty-aware microgrid operation
+        using stochastic scheduling and rolling-horizon model predictive control. My broader academic background
+        also spans communications, embedded systems, robotics, VLSI and photonics.
+      </p>
+      <p>
+        I completed my B.Sc. with a <strong>CGPA of 3.97/4.00</strong>, earning
+        <strong>Summa Cum Laude with Gold Medal</strong> recognition. My long-term goal is to pursue a Ph.D.
+        and contribute to academia and research through intelligent, sustainable, resilient and secure engineering systems.
+      </p>`;
+  }
+
+  const contactSection = document.querySelector("#contact");
+  const contactTitle = contactSection?.querySelector(".section-title");
+  const contactSubtitle = contactSection?.querySelector(".section-subtitle");
+  if (contactTitle) {
+    contactTitle.textContent = "Research collaboration or graduate opportunity?";
+  }
+  if (contactSubtitle) {
+    contactSubtitle.textContent = "I welcome academic discussions and research opportunities in power and energy systems, smart grids and microgrids, renewable integration, applied AI, cyber-physical security and emerging energy infrastructure, with broader interests in photonics and semiconductor technologies.";
+  }
+
   const experienceTimeline = document.querySelector("#experience .timeline");
   if (experienceTimeline) {
     experienceTimeline.innerHTML = `

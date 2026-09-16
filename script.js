@@ -1,3 +1,19 @@
+(function initGoogleAnalytics() {
+  const measurementId = "G-R7TN45F61K";
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId);
+
+  if (!document.querySelector(`script[data-ga4="${measurementId}"]`)) {
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    gaScript.dataset.ga4 = measurementId;
+    document.head.appendChild(gaScript);
+  }
+})();
+
 (function loadPolishStyles() {
   const script = document.currentScript;
   if (!script || document.querySelector('link[data-polish-styles]')) return;
@@ -89,7 +105,7 @@ function syncPortfolioStructure() {
     if (details && !details.textContent.includes("Capstone Project Supervisor")) {
       details.insertAdjacentHTML(
         "beforeend",
-        `<br>Capstone Project Supervisor: <strong>Dr. Md. Abdur Rahman</strong>, Pro-VC &amp; Professor, Faculty of Engineering, AIUB.`
+        `<br>Capstone Project Supervisor: <strong>Prof. Dr. Md. Abdur Rahman</strong>, Pro-Vice Chancellor &amp; Professor, Faculty of Engineering, AIUB.`
       );
     }
   }

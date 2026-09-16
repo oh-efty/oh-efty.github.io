@@ -89,9 +89,39 @@ function syncPortfolioStructure() {
       <div class="selected-research-heading">
         <p class="eyebrow">Selected Research</p>
         <h3>Current and recent research work</h3>
-        <p>Research activities extending beyond coursework and engineering projects.</p>
+        <p>M.Sc. thesis research and conference-oriented work across cyber-physical power systems, microgrids and emerging AI infrastructure.</p>
       </div>
       <div class="research-work-grid">
+        <article class="research-work-card thesis-card">
+          <div class="research-work-top">
+            <span class="research-status ongoing">M.Sc. Thesis Research</span>
+            <span class="research-year">2026 — Present</span>
+          </div>
+          <h3>Advanced Cybersecurity of DER-Integrated Power Systems / Microgrids</h3>
+          <p>Cyber-physical security research on DER-integrated grids and microgrids, studying the impact of selected cyber attacks and developing suitable detection, classification and mitigation approaches.</p>
+          <div class="research-meta">
+            <span><strong>Supervisor</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Attacks</strong> False Data Injection · DoS · command injection · GPS/time spoofing</span>
+          </div>
+          <div class="tag-row"><span>DER Cybersecurity</span><span>Microgrids</span><span>AI/DL</span><span>Digital Twin</span></div>
+          <a class="project-link" href="research/der-cybersecurity-thesis.html">View thesis research →</a>
+        </article>
+
+        <article class="research-work-card">
+          <div class="research-work-top">
+            <span class="research-status ongoing">ICREST Research</span>
+            <span class="research-year">2026 — Present</span>
+          </div>
+          <h3>AI Data Center–Grid Interaction and Dynamic Grid Response</h3>
+          <p>Conference-oriented research on how rapidly changing AI-compute demand, power-electronic interfaces and UPS behavior can affect power-system dynamics, flexibility and grid response.</p>
+          <div class="research-meta">
+            <span><strong>Supervisor</strong> Dr. Md. Rifat Hazari, Associate Professor, Dept. of EEE, AIUB</span>
+            <span><strong>Focus</strong> Dynamic load behavior · UPS response · nonlinear grid dynamics</span>
+          </div>
+          <div class="tag-row"><span>AI Data Centers</span><span>Power Systems</span><span>UPS</span><span>Dynamic Simulation</span></div>
+          <a class="project-link" href="research/ai-data-center-grid.html">View research →</a>
+        </article>
+
         <article class="research-work-card">
           <div class="research-work-top">
             <span class="research-status">Conference Research</span>
@@ -105,21 +135,6 @@ function syncPortfolioStructure() {
           </div>
           <div class="tag-row"><span>Microgrids</span><span>Stochastic Scheduling</span><span>MPC</span><span>Pyomo</span></div>
           <a class="project-link" href="research/microgrid-mpc.html">View research →</a>
-        </article>
-
-        <article class="research-work-card">
-          <div class="research-work-top">
-            <span class="research-status ongoing">Ongoing Research</span>
-            <span class="research-year">2026 — Present</span>
-          </div>
-          <h3>AI Data Center–Grid Interaction and Dynamic Grid Response</h3>
-          <p>Ongoing investigation of how rapidly changing AI-compute demand, power-electronic interfaces and UPS behaviour can affect power-system dynamics, flexibility and grid response.</p>
-          <div class="research-meta">
-            <span><strong>Status</strong> Research in progress</span>
-            <span><strong>Focus</strong> Dynamic load behaviour and grid interaction</span>
-          </div>
-          <div class="tag-row"><span>AI Data Centers</span><span>Power Systems</span><span>UPS</span><span>Dynamic Simulation</span></div>
-          <a class="project-link" href="research/ai-data-center-grid.html">View research →</a>
         </article>
       </div>`;
   }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ongoing research by Obyedul Haque Efty on reinforcement-learning-based electric-vehicle charging optimization in an IEEE 33-bus distribution network using PPO, SAC and grid-aware validation.">
+  <meta name="author" content="Obyedul Haque Efty">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://oh-efty.github.io/research/rl-ev-charging.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="RL-Based EV Charging Optimization | Obyedul Haque Efty">
+  <meta property="og:description" content="Ongoing research on grid-aware EV charging optimization using reinforcement learning in an IEEE 33-bus distribution network.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oh-efty.github.io/research/rl-ev-charging.html">
+  <meta property="og:site_name" content="Obyedul Haque Efty — Academic & Research Portfolio">
+  <meta property="og:image" content="https://oh-efty.github.io/assets/profile.jpeg">
+  <meta property="og:image:alt" content="Obyedul Haque Efty">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RL-Based EV Charging Optimization | Obyedul Haque Efty">
+  <meta name="twitter:description" content="Reinforcement-learning-based EV charging research using PPO, SAC and grid-aware power-system validation.">
+  <meta name="twitter:image" content="https://oh-efty.github.io/assets/profile.jpeg">
+
+  <title>RL-Based EV Charging Optimization | Obyedul Haque Efty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../polish.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "RL-Based EV Charging Optimization",
+    "description": "Ongoing research on reinforcement-learning-based electric-vehicle charging optimization in a radial distribution network with grid-aware validation.",
+    "url": "https://oh-efty.github.io/research/rl-ev-charging.html",
+    "creator": {"@type": "Person", "name": "Obyedul Haque Efty", "url": "https://oh-efty.github.io/"},
+    "isPartOf": {"@type": "WebSite", "name": "Obyedul Haque Efty — Academic & Research Portfolio", "url": "https://oh-efty.github.io/"},
+    "about": ["Electric Vehicle Charging", "Reinforcement Learning", "Distribution Networks", "Power-System Optimization"],
+    "keywords": ["EV Charging", "Reinforcement Learning", "PPO", "SAC", "IEEE 33-Bus", "pandapower", "Distribution Network"]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html"><span class="brand-mark">OE</span><span class="brand-text">Obyedul Haque Efty</span></a>
+      <div class="nav-right">
+        <a class="btn btn-secondary" href="../index.html#research">Research</a>
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Switch theme"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="container reveal">
+        <a class="project-back" href="../index.html#research">← Back to research</a>
+        <p class="eyebrow">Ongoing Research · Electric Vehicles · Reinforcement Learning</p>
+        <h1>RL-Based EV Charging Optimization</h1>
+        <p>Research on intelligent and grid-aware electric-vehicle charging in distribution networks using reinforcement-learning agents and comparative optimization baselines.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="project-banner reveal"><strong>Learning grid-aware EV charging decisions under time-varying demand and network constraints</strong></div>
+
+        <div class="detail-grid">
+          <aside class="detail-sidebar reveal">
+            <dl>
+              <div><dt>Type</dt><dd>Research Project</dd></div>
+              <div><dt>Status</dt><dd>Ongoing Research</dd></div>
+              <div><dt>Period</dt><dd>2026 — Present</dd></div>
+              <div><dt>Domain</dt><dd>Power Systems · Electric Vehicles · Artificial Intelligence</dd></div>
+              <div><dt>Test System</dt><dd>IEEE 33-bus radial distribution feeder</dd></div>
+              <div><dt>Time Resolution</dt><dd>15-minute operational intervals</dd></div>
+              <div><dt>Methods</dt><dd>PPO · SAC · deterministic MPC comparison</dd></div>
+              <div><dt>Tools</dt><dd>Python · pandapower · Stable-Baselines3 · PyTorch</dd></div>
+            </dl>
+          </aside>
+
+          <article class="detail-content reveal">
+            <h2>Research Motivation</h2>
+            <p>Increasing electric-vehicle charging demand can create new operational challenges for distribution networks when charging decisions coincide with high feeder loading or unfavorable voltage conditions. This research explores reinforcement learning as a way to coordinate charging decisions while explicitly evaluating their impact on the underlying electrical network.</p>
+
+            <h2>Research Framework</h2>
+            <ul>
+              <li>Use the IEEE 33-bus radial distribution feeder as the network test system.</li>
+              <li>Represent daily operation with 15-minute time steps and time-varying feeder demand.</li>
+              <li>Model EV charging decisions within a grid-aware reinforcement-learning environment.</li>
+              <li>Evaluate PPO and SAC as continuous-control reinforcement-learning approaches.</li>
+              <li>Compare learned policies with conventional charging strategies and a deterministic model-predictive-control baseline.</li>
+              <li>Validate network behavior using nonlinear AC power-flow calculations in pandapower.</li>
+            </ul>
+
+            <h2>Evaluation Direction</h2>
+            <p>The study is designed to compare charging cost, aggregate charging behavior, feeder loading, voltage performance and network losses across alternative charging-control strategies. The research workflow also separates training, validation and held-out testing so that final RL performance can be evaluated on unseen operating days.</p>
+
+            <h2>Current Status</h2>
+            <p>The research is actively in progress. The simulation environment, grid model, baseline workflows and reinforcement-learning pipeline are being developed and audited iteratively. Final comparative PPO/SAC results are not presented here yet because the study is still undergoing scientific validation.</p>
+
+            <h2>Research Resources</h2>
+            <div class="skill-blocks">
+              <article class="skill-card"><h3>Model & Methodology</h3><p>Detailed environment design, reward formulation and evaluation protocol will be added after the methodology is finalized.</p></article>
+              <article class="skill-card"><h3>Figures & Results</h3><p>Selected charging, voltage, feeder-loading and learning-performance plots will be added after final validation.</p></article>
+              <article class="skill-card"><h3>Code / Repository</h3><p>A public code or reproducibility repository can be linked later when the research artifacts are ready for release.</p></article>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-wrap"><p>© <span id="year"></span> Obyedul Haque Efty.</p><a href="../index.html#research">Return to research →</a></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

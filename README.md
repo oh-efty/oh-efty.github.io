@@ -32,9 +32,10 @@ Current research directions include:
 - Current CV and professional profile links
 - Education, experience, skills and achievements
 - Two IEEE TPEC 2026 publications with DOI and BibTeX links
-- Three dedicated research pages
+- Four dedicated research pages
   - M.Sc. thesis: DER-integrated power-system / microgrid cybersecurity
   - AI data-center–grid interaction and dynamic grid response
+  - RL-based EV charging optimization in distribution networks
   - Microgrid forecast uncertainty, stochastic scheduling and rolling-horizon MPC
 - Four dedicated project pages
   - Unmanned Underwater Vehicle (UUV/ROV)
